@@ -28,12 +28,17 @@ const ingredients = [
 ];
 
 const list = document.querySelector("#ingredients");
-let ingredient;
-for (let i = 0; i < ingredients.length; i++){
-  ingredient = document.createElement("li");
-  ingredient.textContent = ingredients[i];
-  ingredient.className = `item`;
-  list.append(ingredient);
+let ingredientEl = ingredients
+  .map((ingredient) => `<li class = "item">${ingredient}</li>`)
+  .join("");
+
+list.insertAdjacentHTML("beforeend", ingredientEl);
+
+// let ingredient;
+// for (let i = 0; i < ingredients.length; i++){
+//   ingredient = document.createElement("li");
+//   ingredient.textContent = ingredients[i];
+//   ingredient.className = `item`;
+//   list.append(ingredient);
   // console.log(ingredient);
-}
 

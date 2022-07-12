@@ -5,6 +5,7 @@
 // <span id="text">Abracadabra!</span>
 
 const fontSize = document.querySelector("#font-size-control");
+fontSize.value = 16;
 const text = document.querySelector("#text");
 let size;
 
